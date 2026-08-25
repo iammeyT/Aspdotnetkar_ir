@@ -1,13 +1,16 @@
 using Aspdotnetkar.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Globalization;
+using System.Runtime.CompilerServices;
 
 namespace Aspdotnetkar.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : Controller    
     {
         public IActionResult Index()
         {
+            ViewBag.dt = ShamsiDatetime.toshamsi(DateTime.Now);
             return View();
         }
 
