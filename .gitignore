@@ -362,3 +362,50 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /Aspdotnetkar/Aspdotnetkar.csproj
+
+
+
+#myseting
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+.vscode/
+.idea/
+
+# Build
+bin/
+obj/
+
+# ASP.NET Core configuration - contains secrets
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Local.json
+
+# Environment variables
+.env
+.env.*
+
+# Certificates / private keys
+*.pfx
+*.p12
+*.pem
+*.key
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+
