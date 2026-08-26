@@ -42,9 +42,12 @@ namespace Aspdotnetkar.Models
         [DisplayName("هشتگ")]
         public string Tags { get; set; }
 
-        [ForeignKey(nameof(ServiceCategory))]
+       
+
+
         public int SiteServiceId { get; set; }
-        public ServiceCategory serviceCategorie { get; set; }
+        [ForeignKey("SiteServiceId")]
+        public ServiceCategory serviceCategory { get; set; }
 
     }
 }

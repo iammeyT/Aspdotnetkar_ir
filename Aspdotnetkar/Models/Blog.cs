@@ -20,7 +20,7 @@ namespace Aspdotnetkar.Models
         [Required(ErrorMessage = "این فیلد اجباری میباشد")]
         [DisplayName("توضیح مختصر")]
         [Column(TypeName = "nvarchar")]
-        [MaxLength(300,ErrorMessage ="بیش از 300 کاراکتر ممکن نیست")]
+        [MaxLength(300, ErrorMessage = "بیش از 300 کاراکتر ممکن نیست")]
         [DataType(DataType.MultilineText)]
         public string BlogShortdescription { get; set; }
 
@@ -41,22 +41,24 @@ namespace Aspdotnetkar.Models
         public string BlogCreateDate { get; set; }
 
 
-       
+
         [DisplayName("عکس")]
-        public string BlogImage { get; set; }
+        public string? BlogImage { get; set; }
+
 
         [DisplayName("هشتگ")]
-        public string Tags { get; set; }
+        public string? Tags { get; set; }
 
 
         [DisplayName("تعداد بازدید")]
-        public int BlogVisitCount { get; set; }
+        public int? BlogVisitCount { get; set; }
 
 
 
-        [ForeignKey(nameof(BlogCategory))]
-        public int BlogsId { get; set; }
 
-        public BlogCategory BlogCategories { get; set; }
+        public int CategoryId { get; set; }
+
+        [ForeignKey("CategoryId")]
+        public BlogCategory BlogCategory { get; set; }
     }
 }

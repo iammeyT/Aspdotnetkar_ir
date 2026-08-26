@@ -3,6 +3,7 @@ using Aspdotnetkar.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Aspdotnetkar.Migrations
 {
     [DbContext(typeof(SiteContext))]
-    partial class SiteContextModelSnapshot : ModelSnapshot
+    [Migration("20260825172737_2-mig")]
+    partial class _2mig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -28,6 +31,9 @@ namespace Aspdotnetkar.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BlogCategoriesId")
+                        .HasColumnType("int");
 
                     b.Property<string>("BlogCreateDate")
                         .IsRequired()
@@ -53,7 +59,7 @@ namespace Aspdotnetkar.Migrations
                     b.Property<int?>("BlogVisitCount")
                         .HasColumnType("int");
 
-                    b.Property<int>("CategoryId")
+                    b.Property<int>("BlogsId")
                         .HasColumnType("int");
 
                     b.Property<string>("Tags")
@@ -61,7 +67,7 @@ namespace Aspdotnetkar.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
+                    b.HasIndex("BlogCategoriesId");
 
                     b.ToTable("blogs");
                 });
@@ -135,33 +141,36 @@ namespace Aspdotnetkar.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("serviceCategorieId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("SiteServiceId");
+                    b.HasIndex("serviceCategorieId");
 
                     b.ToTable("services");
                 });
 
             modelBuilder.Entity("Aspdotnetkar.Models.Blog", b =>
                 {
-                    b.HasOne("Aspdotnetkar.Models.BlogCategory", "BlogCategory")
+                    b.HasOne("Aspdotnetkar.Models.BlogCategory", "BlogCategories")
                         .WithMany("blogs")
-                        .HasForeignKey("CategoryId")
+                        .HasForeignKey("BlogCategoriesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("BlogCategory");
+                    b.Navigation("BlogCategories");
                 });
 
             modelBuilder.Entity("Aspdotnetkar.Models.SiteService", b =>
                 {
-                    b.HasOne("Aspdotnetkar.Models.ServiceCategory", "serviceCategory")
+                    b.HasOne("Aspdotnetkar.Models.ServiceCategory", "serviceCategorie")
                         .WithMany("siteservices")
-                        .HasForeignKey("SiteServiceId")
+                        .HasForeignKey("serviceCategorieId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("serviceCategory");
+                    b.Navigation("serviceCategorie");
                 });
 
             modelBuilder.Entity("Aspdotnetkar.Models.BlogCategory", b =>

@@ -1,0 +1,83 @@
+@model IEnumerable<Aspdotnetkar.Models.Blog>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogShortdescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogCreateDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tags)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogVisitCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogCategory)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.BlogTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.BlogShortdescription)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.BlogText)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.BlogCreateDate)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.BlogImage)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Tags)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.BlogVisitCount)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.CategoryId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.BlogCategory)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

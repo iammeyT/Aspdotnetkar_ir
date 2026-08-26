@@ -3,6 +3,7 @@ using Aspdotnetkar.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Aspdotnetkar.Migrations
 {
     [DbContext(typeof(SiteContext))]
-    partial class SiteContextModelSnapshot : ModelSnapshot
+    [Migration("20260825174020_3-mig")]
+    partial class _3mig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -135,9 +138,12 @@ namespace Aspdotnetkar.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("serviceCategorieId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("SiteServiceId");
+                    b.HasIndex("serviceCategorieId");
 
                     b.ToTable("services");
                 });
@@ -155,13 +161,13 @@ namespace Aspdotnetkar.Migrations
 
             modelBuilder.Entity("Aspdotnetkar.Models.SiteService", b =>
                 {
-                    b.HasOne("Aspdotnetkar.Models.ServiceCategory", "serviceCategory")
+                    b.HasOne("Aspdotnetkar.Models.ServiceCategory", "serviceCategorie")
                         .WithMany("siteservices")
-                        .HasForeignKey("SiteServiceId")
+                        .HasForeignKey("serviceCategorieId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("serviceCategory");
+                    b.Navigation("serviceCategorie");
                 });
 
             modelBuilder.Entity("Aspdotnetkar.Models.BlogCategory", b =>

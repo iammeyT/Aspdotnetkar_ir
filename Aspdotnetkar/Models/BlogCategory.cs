@@ -11,7 +11,7 @@ namespace Aspdotnetkar.Models
 
         [Required(ErrorMessage = "این فیلد اجباری میباشد")]
         [DisplayName("نام گروه بندی بلاگ")]
-        [Column(TypeName = "nvarchar")]
+        //[Column(TypeName = "nvarchar")]
         [MaxLength(50)]
         public string BlogCategoryTitle { get; set; }
 

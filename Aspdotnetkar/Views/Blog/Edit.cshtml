@@ -1,0 +1,74 @@
+@model Aspdotnetkar.Models.Blog
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Blog</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="BlogTitle" class="control-label"></label>
+                <input asp-for="BlogTitle" class="form-control" />
+                <span asp-validation-for="BlogTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogShortdescription" class="control-label"></label>
+                <input asp-for="BlogShortdescription" class="form-control" />
+                <span asp-validation-for="BlogShortdescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogText" class="control-label"></label>
+                <input asp-for="BlogText" class="form-control" />
+                <span asp-validation-for="BlogText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogCreateDate" class="control-label"></label>
+                <input asp-for="BlogCreateDate" class="form-control" />
+                <span asp-validation-for="BlogCreateDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogImage" class="control-label"></label>
+                <input asp-for="BlogImage" class="form-control" />
+                <span asp-validation-for="BlogImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tags" class="control-label"></label>
+                <input asp-for="Tags" class="form-control" />
+                <span asp-validation-for="Tags" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogVisitCount" class="control-label"></label>
+                <input asp-for="BlogVisitCount" class="form-control" />
+                <span asp-validation-for="BlogVisitCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryId" class="control-label"></label>
+                <input asp-for="CategoryId" class="form-control" />
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogCategory" class="control-label"></label>
+                <input asp-for="BlogCategory" class="form-control" />
+                <span asp-validation-for="BlogCategory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
