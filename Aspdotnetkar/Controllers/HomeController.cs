@@ -1,3 +1,4 @@
+using Aspdotnetkar.Context;
 using Aspdotnetkar.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -6,10 +7,23 @@ using System.Runtime.CompilerServices;
 
 namespace Aspdotnetkar.Controllers
 {
-    public class HomeController : Controller    
+    public class HomeController : Controller
     {
+        private SiteContext _context;
+        public HomeController(SiteContext context)
+        {
+            _context = context;
+        }
+
+        public IActionResult blogPartial()
+        {
+            var bc = _context.blogs.ToList();
+            return View();
+        }
+
         public IActionResult Index()
         {
+
             ViewBag.dt = ShamsiDatetime.toshamsi(DateTime.Now);
             return View();
         }
