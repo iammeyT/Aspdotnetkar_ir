@@ -155,69 +155,11 @@
 
 
 @await Component.InvokeAsync("BlogComponent")
-<partial name="_BlogCategoryPartial" model="Model"/>
+@await Component.InvokeAsync("LastBlogComponent")
 
 
 
-<div class="container mt-5 mb-8 pb-0" id="lastnews" style="padding-top: 35px;box-shadow: 5px 5px 10px var(--bs-warning);">
-    <div class="row row-cols-sm-1 row-cols-lg-2">
-        <div class="col-sm-12 col-lg-8 text-end">
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-info text-center" style="background: var(--bs-warning);"><span style="color: rgb(0,0,0);">اخرین خبر ها</span></li>
-                <li class="list-group-item text-end text-sm-end">
-                    <a class="fs-5 d-block" href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="270" height="212" style="border-radius: 10px;">
-                    <p class="text-truncate text-end text-sm-end text-md-end text-lg-end text-xl-end text-xxl-end">این قسمت متن خلاصه خبر قرار میگیرد</p>
-                    <p>تاریخ انتشار : 4/1/1405</p>
-                </li>
-                <li class="list-group-item text-end text-sm-end">
-                    <a class="fs-5 d-block" href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="270" height="212" style="border-radius: 10px;">
-                    <p class="text-truncate text-end text-sm-end text-md-end text-lg-end text-xl-end text-xxl-end">این قسمت متن خلاصه خبر قرار میگیرد</p>
-                    <p>تاریخ انتشار : 4/1/1405</p>
-                </li>
-                <li class="list-group-item text-end text-sm-end">
-                    <a class="fs-5 d-block" href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="270" height="212" style="border-radius: 10px;">
-                    <p class="text-truncate text-end text-sm-end text-md-end text-lg-end text-xl-end text-xxl-end">این قسمت متن خلاصه خبر قرار میگیرد</p>
-                    <p>تاریخ انتشار : 4/1/1405</p>
-                </li>
-                <li class="list-group-item text-end text-sm-end">
-                    <a class="fs-5 d-block" href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="270" height="212" style="border-radius: 10px;">
-                    <p class="text-truncate text-end text-sm-end text-md-end text-lg-end text-xl-end text-xxl-end">این قسمت متن خلاصه خبر قرار میگیرد</p>
-                    <p>تاریخ انتشار : 4/1/1405</p>
-                </li>
-                <li class="list-group-item text-end text-sm-end">
-                    <a class="fs-5 d-block" href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="270" height="212" style="border-radius: 10px;">
-                    <p class="text-truncate text-end text-sm-end text-md-end text-lg-end text-xl-end text-xxl-end">این قسمت متن خلاصه خبر قرار میگیرد</p>
-                    <p>تاریخ انتشار : 4/1/1405</p>
-                </li>
-            </ul>
-        </div>
-        <div class="col col-lg-4 text-end">
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-info text-center" style="background: var(--bs-warning);"><span style="color: rgb(0,0,0);">پربازید ترینها</span></li>
-                <li class="list-group-item text-end text-sm-end">
-                    <span class="badge bg-primary rounded-pill me-4">42</span><a href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a>
-                    <p>تاریخ انتشار : 4/1/1405</p><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="126" height="100" style="border-radius: 10px;">
-                </li>
-                <li class="list-group-item text-end text-sm-end">
-                    <span class="badge bg-primary rounded-pill me-4">42</span><a href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a>
-                    <p>تاریخ انتشار : 4/1/1405</p><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="126" height="100" style="border-radius: 10px;">
-                </li>
-                <li class="list-group-item text-end text-sm-end">
-                    <span class="badge bg-primary rounded-pill me-4">42</span><a href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a>
-                    <p>تاریخ انتشار : 4/1/1405</p><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="126" height="100" style="border-radius: 10px;">
-                </li>
-                <li class="list-group-item text-end text-sm-end">
-                    <span class="badge bg-primary rounded-pill me-4">42</span><a href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a>
-                    <p>تاریخ انتشار : 4/1/1405</p><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="126" height="100" style="border-radius: 10px;">
-                </li>
-                <li class="list-group-item text-end text-sm-end">
-                    <span class="badge bg-primary rounded-pill me-4">42</span><a href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a>
-                    <p>تاریخ انتشار : 4/1/1405</p><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="126" height="100" style="border-radius: 10px;">
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+
 <section class="position-relative mt-0 py-4 py-xl-5" id="contact" style="background: #d6a2a2;">
     <div class="container position-relative">
         <div class="row mb-5">
