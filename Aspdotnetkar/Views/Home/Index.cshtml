@@ -151,7 +151,14 @@
     <p class="fs-1 fw-bold"><span style="color: rgb(26, 26, 26);">اخرین مقالات و اموزش ها</span></p>
     <p class="lead fs-4 text-center">دانش و تجربه خود را در حوزه ASP.NET Core و اکوسیستم مایکروسافت به اشتراک می‌گذاریم</p>
 </div>
+
+
+
+@await Component.InvokeAsync("BlogComponent")
 <partial name="_BlogCategoryPartial" model="Model"/>
+
+
+
 <div class="container mt-5 mb-8 pb-0" id="lastnews" style="padding-top: 35px;box-shadow: 5px 5px 10px var(--bs-warning);">
     <div class="row row-cols-sm-1 row-cols-lg-2">
         <div class="col-sm-12 col-lg-8 text-end">

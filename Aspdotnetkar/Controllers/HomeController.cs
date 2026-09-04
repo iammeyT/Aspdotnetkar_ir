@@ -20,18 +20,7 @@ namespace Aspdotnetkar.Controllers
         {
             ViewBag.dt = ShamsiDatetime.toshamsi(DateTime.Now);
 
-            var blogcategory = _context.blogCategories.ToList();
-
-            var blog = _context.blogs.OrderByDescending(o => o.BlogTitle).Take(3).ToList();
-            
-
-            var vm = new BlogViewModel()
-            {
-                blogvm = blog,
-                BlogCategoryvm = blogcategory,
-            };
-
-            return View(vm);
+            return View();
         }
 
 

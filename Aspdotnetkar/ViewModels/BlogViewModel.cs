@@ -11,7 +11,5 @@ namespace Aspdotnetkar.ViewModels
 
         public List<BlogCategory> BlogCategoryvm { get; set; }
 
-        //public int blogcountvm { get; set; }
-
     }
 }
