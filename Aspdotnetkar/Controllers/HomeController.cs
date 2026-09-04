@@ -1,5 +1,6 @@
 using Aspdotnetkar.Context;
 using Aspdotnetkar.Models;
+using Aspdotnetkar.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Globalization;
@@ -15,23 +16,27 @@ namespace Aspdotnetkar.Controllers
             _context = context;
         }
 
-        public IActionResult blogPartial()
-        {
-            var bc = _context.blogs.ToList();
-            return View();
-        }
-
         public IActionResult Index()
         {
-
             ViewBag.dt = ShamsiDatetime.toshamsi(DateTime.Now);
-            return View();
+
+            var blogcategory = _context.blogCategories.ToList();
+
+            var blog = _context.blogs.OrderByDescending(o => o.BlogTitle).Take(3).ToList();
+            
+
+            var vm = new BlogViewModel()
+            {
+                blogvm = blog,
+                BlogCategoryvm = blogcategory,
+            };
+
+            return View(vm);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

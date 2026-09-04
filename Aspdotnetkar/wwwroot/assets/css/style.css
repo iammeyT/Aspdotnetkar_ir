@@ -1,0 +1,27 @@
+#phero {
+  direction: rtl;
+  color: white;
+}
+
+.containerservice {
+  direction: rtl;
+}
+
+p {
+  direction: rtl;
+  color: black;
+}
+
+#Services {
+  direction: rtl;
+  background: #c8baba;
+}
+
+html {
+  scroll-padding-top: 10px;
+}
+
+#body {
+  font-family: 'Vazirmatn';
+}
+

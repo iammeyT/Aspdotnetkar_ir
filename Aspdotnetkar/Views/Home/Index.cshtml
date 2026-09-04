@@ -1,16 +1,272 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div class="text-center">
-    <h1 class="display-4">خوش امدید</h1>
-    <p>..... به زودی</p>
-
-    
-    @{
-        <h1>@ViewBag.dt</h1>
-    }
-    <a asp-action="create" asp-controller="blogcategory" asp> create blogcategory</a>
-    <br />
-    <a asp-action="create" asp-controller="Blog"> create Blogs</a>
+﻿<section class="py-4 py-xl-5" id="HeroBanner">
+    <div class="container">
+        <div class="bg-dark border rounded border-0 border-dark overflow-hidden">
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <div class="text-white p-4 p-md-5">
+                        <h2 class="fw-bold text-white mb-3">ای اس پی دات نت کار</h2>
+                        <p class="mb-4" id="phero" style="text-align: justify;">ما با استفاده از جدیدترین تکنولوژی‌های مایکروسافت شامل C#، ASP.NET Core، Azure و SQL Server، وب سایت‌های مقیاس‌پذیر، امن و با عملکرد بالا طراحی و توسعه می‌دهیم.</p>
+                        <div class="my-3"><a class="btn btn-primary btn-lg me-2" role="button" href="#ServiceHeading">خدمات</a><a class="btn btn-light btn-lg" role="button" href="#">مشاوره رایگان</a></div>
+                    </div>
+                </div>
+                <div class="col-md-6 order-first order-md-last" style="min-height: 250px;"><img class="object-fit-cover w-100 h-100" src="assets/img/Aspdotnetkar.ir_logo.png"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row justify-content-center mt-3 py-4">
+        <div class="col-md-8 text-center">
+            <h2>خدمات تخصصی طراحی و توسعه</h2>
+            <p class="lead" id="phero-1">با تکیه بر اکوسیستم قدرتمند مایکروسافت، راهکارهای جامع و حرفه‌ای ارائه می‌دهیم</p>
+        </div>
+    </div>
 </div>
+<div class="container" id="Services" style="background: rgb(255,255,255);text-align: justify;">
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2" style="color: rgb(0,0,0);">
+        <div class="col order-4 me-0 mt-2 mb-0 pb-0" style="border-width: 2.5px;border-style: solid;border-radius: 15px;">
+            <h4 class="pt-2"><strong>بهینه‌سازی عملکرد</strong></h4>
+            <p>بهبود سرعت و کارایی اپلیکیشن با caching، lazy loading، CDN و تکنیک‌های پیشرفته ASP.NET Core</p>
+        </div>
+        <div class="col order-2 mt-2" style="border-radius: 15px;border-width: 2.5px;border-style: solid;">
+            <h4 class="pt-2"><strong>طراحی دیتابیس</strong></h4>
+            <p>طراحی و بهینه‌سازی دیتابیس با SQL Server و Entity Framework Core با بهترین الگوهای طراحی</p>
+        </div>
+        <div class="col order-3 mt-2 pt-0" style="border-width: 2.5px;border-style: solid;border-top-color: rgb(85,;border-right-color: 89,;border-bottom-color: 92);border-left-color: 89,;border-radius: 15px;">
+            <h4 class="pt-2"><strong>امنیت و احراز هویت</strong></h4>
+            <p>پیاده‌سازی سیستم‌های امنیتی با Identity، JWT، OAuth2</p>
+        </div>
+        <div class="col mt-2 pt-0" style="border-width: 2.5px;border-style: solid;border-radius: 15px;">
+            <h4 class="pt-2"><strong>توسعه وب اپلیکیشن</strong></h4>
+            <p>طراحی و توسعه وب اپلیکیشن‌های سازمانی با ASP.NET Core MVC و Razor Pages با معماری تمیز و قابل نگهداری</p>
+        </div>
+    </div>
+</div>
+<div class="container mt-0 pt-0" style="text-align: center;padding-top: 0px;">
+    <p class="lead" style="padding: 0px;padding-top: 190px;">تکنولوژی به کار رفته در این سایت</p>
+</div>
+<div class="container mt-3">
+    <div class="row row-cols-1 row-cols-md-3 text-center">
+        <div class="col" data-bss-hover-animate="pulse">
+            <img class="img-fluid" width="96" height="96" src="assets/img/New%20Folder/icons8-sql-96.png">
+            <p>&nbsp;Sql Server</p>
+        </div>
+        <div class="col" data-bss-hover-animate="pulse">
+            <img class="img-fluid" width="96" height="96" src="assets/img/New%20Folder/icons8-c-sharp-logo-96.png">
+            <p>#C</p>
+        </div>
+        <div class="col" data-bss-hover-animate="pulse">
+            <img class="img-fluid" width="100" height="100" src="assets/img/New%20Folder/icons8-.net-framework-100.svg">
+            <p>NET Core.</p>
+        </div>
+        <div class="col" data-bss-hover-animate="pulse">
+            <img class="img-fluid" width="100" height="100" src="assets/img/New%20Folder/icons8-bootstrap-100.svg">
+            <p>Bootstrap</p>
+        </div>
+        <div class="col" data-bss-hover-animate="pulse">
+            <img class="img-fluid" width="100" height="100" src="assets/img/New%20Folder/icons8-css3-100.svg">
+            <p>Css3</p>
+        </div>
+        <div class="col" data-bss-hover-animate="pulse">
+            <img class="img-fluid" width="100" height="100" src="assets/img/New%20Folder/icons8-html-5-100.svg">
+            <p>Html5</p>
+        </div>
+    </div>
+</div>
+<div class="container text-center mt-0" id="ServiceHeading" style="padding-top: 190px;">
+    <p class="fs-1 fw-bold">پلن مناسب خود را انتخاب کنید</p>
+    <p class="lead fs-4">پلن‌های متنوع برای هر نوع کسب‌وکار، از استارتاپ تا سازمان‌های بزرگ</p>
+</div>
+<div class="container mt-0 pt-0" id="service" style="padding-top: 35px;box-shadow: 5px 5px 10px 0px var(--bs-success);">
+    <div class="row row-cols-sm-1 row-cols-lg-2">
+        <div class="col-sm-12 col-lg-8 mb-3">
+            <div class="swiper" id="swiper-2" data-bss-swiper="{&quot;direction&quot;:&quot;horizontal&quot;,&quot;effect&quot;:&quot;slide&quot;,&quot;pagination&quot;:{&quot;el&quot;:&quot;.swiper-pagination&quot;,&quot;type&quot;:&quot;bullets&quot;},&quot;navigation&quot;:{&quot;nextEl&quot;:&quot;.swiper-button-next&quot;,&quot;prevEl&quot;:&quot;.swiper-button-prev&quot;}}">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 text-end">
+                                <p class="display-6"><a class="fs-4 text-decoration-none" href="#" style="color: var(--bs-black);">عنوان</a></p>
+                                <p class="text-end">&nbsp; لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.&nbsp;</p>
+                            </div>
+                            <div class="col text-end"><img class="img-fluid aspect-ratio-1x1 w-100 h-100" width="293" height="238" src="assets/img/thumb.png" style="border-radius: 10px;"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 text-end">
+                                <p class="display-6"><a class="fs-4 text-decoration-none" href="#" style="color: var(--bs-black);">عنوان</a></p>
+                                <p class="text-end">&nbsp; لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.&nbsp;</p>
+                            </div>
+                            <div class="col text-end"><img class="img-fluid aspect-ratio-1x1 w-100 h-100" width="293" height="238" src="assets/img/thumb.png" style="border-radius: 10px;"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 text-end">
+                                <p class="display-6"><a class="fs-4 text-decoration-none" href="#" style="color: var(--bs-black);">عنوان</a></p>
+                                <p class="text-end">&nbsp; لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.&nbsp;</p>
+                            </div>
+                            <div class="col text-end"><img class="img-fluid aspect-ratio-1x1 w-100 h-100" width="293" height="238" src="assets/img/thumb.png" style="border-radius: 10px;"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 text-end">
+                                <p class="display-6"><a class="fs-4 text-decoration-none" href="#" style="color: var(--bs-black);">عنوان</a></p>
+                                <p class="text-end">&nbsp; لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.&nbsp;</p>
+                            </div>
+                            <div class="col text-end"><img class="img-fluid aspect-ratio-1x1 w-100 h-100" width="293" height="238" src="assets/img/thumb.png" style="border-radius: 10px;"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 text-end">
+                                <p class="display-6"><a class="fs-4 text-decoration-none" href="#" style="color: var(--bs-black);">عنوان</a></p>
+                                <p class="text-end">&nbsp; لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.&nbsp;</p>
+                            </div>
+                            <div class="col text-end"><img class="img-fluid aspect-ratio-1x1 w-100 h-100" width="293" height="238" src="assets/img/thumb.png" style="border-radius: 10px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="col col-lg-4 text-end">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info text-center" style="background: var(--bs-success);"><span style="color: rgb(255,255,255);">خدمات</span></li>
+                <li class="list-group-item text-end"><a href="#" style="color: rgb(0,0,0);text-decoration: none;">شرکتی</a></li>
+                <li class="list-group-item"><a href="#" style="color: rgb(0,0,0);text-decoration: none;">شخصی</a></li>
+                <li class="list-group-item text-end"><a href="#" style="color: rgb(0,0,0);text-decoration: none;">فروشگاهی</a></li>
+                <li class="list-group-item text-end"><a href="#" style="color: rgb(0,0,0);text-decoration: none;">رزومه ای</a></li>
+                <li class="list-group-item text-end"><a href="#" style="color: rgb(0,0,0);text-decoration: none;">دانلود</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container text-center mt-0" id="BlogHeading" style="padding-top: 190px;">
+    <p class="fs-1 fw-bold"><span style="color: rgb(26, 26, 26);">اخرین مقالات و اموزش ها</span></p>
+    <p class="lead fs-4 text-center">دانش و تجربه خود را در حوزه ASP.NET Core و اکوسیستم مایکروسافت به اشتراک می‌گذاریم</p>
+</div>
+<partial name="_BlogCategoryPartial" model="Model"/>
+<div class="container mt-5 mb-8 pb-0" id="lastnews" style="padding-top: 35px;box-shadow: 5px 5px 10px var(--bs-warning);">
+    <div class="row row-cols-sm-1 row-cols-lg-2">
+        <div class="col-sm-12 col-lg-8 text-end">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info text-center" style="background: var(--bs-warning);"><span style="color: rgb(0,0,0);">اخرین خبر ها</span></li>
+                <li class="list-group-item text-end text-sm-end">
+                    <a class="fs-5 d-block" href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="270" height="212" style="border-radius: 10px;">
+                    <p class="text-truncate text-end text-sm-end text-md-end text-lg-end text-xl-end text-xxl-end">این قسمت متن خلاصه خبر قرار میگیرد</p>
+                    <p>تاریخ انتشار : 4/1/1405</p>
+                </li>
+                <li class="list-group-item text-end text-sm-end">
+                    <a class="fs-5 d-block" href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="270" height="212" style="border-radius: 10px;">
+                    <p class="text-truncate text-end text-sm-end text-md-end text-lg-end text-xl-end text-xxl-end">این قسمت متن خلاصه خبر قرار میگیرد</p>
+                    <p>تاریخ انتشار : 4/1/1405</p>
+                </li>
+                <li class="list-group-item text-end text-sm-end">
+                    <a class="fs-5 d-block" href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="270" height="212" style="border-radius: 10px;">
+                    <p class="text-truncate text-end text-sm-end text-md-end text-lg-end text-xl-end text-xxl-end">این قسمت متن خلاصه خبر قرار میگیرد</p>
+                    <p>تاریخ انتشار : 4/1/1405</p>
+                </li>
+                <li class="list-group-item text-end text-sm-end">
+                    <a class="fs-5 d-block" href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="270" height="212" style="border-radius: 10px;">
+                    <p class="text-truncate text-end text-sm-end text-md-end text-lg-end text-xl-end text-xxl-end">این قسمت متن خلاصه خبر قرار میگیرد</p>
+                    <p>تاریخ انتشار : 4/1/1405</p>
+                </li>
+                <li class="list-group-item text-end text-sm-end">
+                    <a class="fs-5 d-block" href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="270" height="212" style="border-radius: 10px;">
+                    <p class="text-truncate text-end text-sm-end text-md-end text-lg-end text-xl-end text-xxl-end">این قسمت متن خلاصه خبر قرار میگیرد</p>
+                    <p>تاریخ انتشار : 4/1/1405</p>
+                </li>
+            </ul>
+        </div>
+        <div class="col col-lg-4 text-end">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info text-center" style="background: var(--bs-warning);"><span style="color: rgb(0,0,0);">پربازید ترینها</span></li>
+                <li class="list-group-item text-end text-sm-end">
+                    <span class="badge bg-primary rounded-pill me-4">42</span><a href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a>
+                    <p>تاریخ انتشار : 4/1/1405</p><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="126" height="100" style="border-radius: 10px;">
+                </li>
+                <li class="list-group-item text-end text-sm-end">
+                    <span class="badge bg-primary rounded-pill me-4">42</span><a href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a>
+                    <p>تاریخ انتشار : 4/1/1405</p><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="126" height="100" style="border-radius: 10px;">
+                </li>
+                <li class="list-group-item text-end text-sm-end">
+                    <span class="badge bg-primary rounded-pill me-4">42</span><a href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a>
+                    <p>تاریخ انتشار : 4/1/1405</p><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="126" height="100" style="border-radius: 10px;">
+                </li>
+                <li class="list-group-item text-end text-sm-end">
+                    <span class="badge bg-primary rounded-pill me-4">42</span><a href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a>
+                    <p>تاریخ انتشار : 4/1/1405</p><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="126" height="100" style="border-radius: 10px;">
+                </li>
+                <li class="list-group-item text-end text-sm-end">
+                    <span class="badge bg-primary rounded-pill me-4">42</span><a href="#" style="color: rgb(0,0,0);text-decoration: none;">عنوان خبر در این ناحیه قرار میگیرد</a>
+                    <p>تاریخ انتشار : 4/1/1405</p><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="126" height="100" style="border-radius: 10px;">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<section class="position-relative mt-0 py-4 py-xl-5" id="contact" style="background: #d6a2a2;">
+    <div class="container position-relative">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2>تماس با ما</h2>
+                <p>نظرات،انتقادات،پیشنهادات و... خودتون رو برامون بفرستید</p>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6 col-lg-4 col-xl-4">
+                <div class="d-flex h-100 flex-column justify-content-center align-items-start">
+                    <div class="d-flex align-items-center p-3">
+                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon" style="background: rgb(0,0,0);">
+                            <svg class="bi bi-telephone" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"></path>
+                            </svg>
+                        </div>
+                        <div class="px-2">
+                            <h6 class="mb-0">موبایل</h6>
+                            <p class="mb-0">0990</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center p-3">
+                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon" style="background: rgb(0,0,0);">
+                            <svg class="bi bi-envelope" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"></path>
+                            </svg>
+                        </div>
+                        <div class="px-2">
+                            <h6 class="mb-0">ایمیل</h6>
+                            <p class="mb-0">m.abbasi7596@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center p-3">
+                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon" style="background: rgb(0,0,0);">
+                            <svg class="bi bi-pin" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M4.146.146A.5.5 0 0 1 4.5 0h7a.5.5 0 0 1 .5.5c0 .68-.342 1.174-.646 1.479-.126.125-.25.224-.354.298v4.431l.078.048c.203.127.476.314.751.555C12.36 7.775 13 8.527 13 9.5a.5.5 0 0 1-.5.5h-4v4.5c0 .276-.224 1.5-.5 1.5s-.5-1.224-.5-1.5V10h-4a.5.5 0 0 1-.5-.5c0-.973.64-1.725 1.17-2.189A6 6 0 0 1 5 6.708V2.277a3 3 0 0 1-.354-.298C4.342 1.674 4 1.179 4 .5a.5.5 0 0 1 .146-.354m1.58 1.408-.002-.001zm-.002-.001.002.001A.5.5 0 0 1 6 2v5a.5.5 0 0 1-.276.447h-.002l-.012.007-.054.03a5 5 0 0 0-.827.58c-.318.278-.585.596-.725.936h7.792c-.14-.34-.407-.658-.725-.936a5 5 0 0 0-.881-.61l-.012-.006h-.002A.5.5 0 0 1 10 7V2a.5.5 0 0 1 .295-.458 1.8 1.8 0 0 0 .351-.271c.08-.08.155-.17.214-.271H5.14q.091.15.214.271a1.8 1.8 0 0 0 .37.282"></path>
+                            </svg>
+                        </div>
+                        <div class="px-2">
+                            <h6 class="mb-0">شهر</h6>
+                            <p class="mb-0">Shiraz</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xl-4">
+                <div>
+                    <form class="p-3 p-xl-4" method="post">
+                        <div class="mb-3"><input class="text-end form-control" type="text" id="name-1" name="name" placeholder="نام"></div>
+                        <div class="mb-3"><input class="text-end form-control" type="email" id="email-1" name="email" placeholder="ایمیل"></div>
+                        <div class="mb-3"><textarea class="text-end form-control" id="message-1" name="message" rows="6" placeholder="پیام"></textarea></div>
+                        <div><button class="btn btn-primary w-100 d-block" type="submit" style="background: rgb(0,0,0);">ارسال</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

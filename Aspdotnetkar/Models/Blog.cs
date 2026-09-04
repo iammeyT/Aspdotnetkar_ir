@@ -28,8 +28,7 @@ namespace Aspdotnetkar.Models
 
         [Required(ErrorMessage = "این فیلد اجباری میباشد")]
         [DisplayName("متن بلاگ")]
-        [Column(TypeName = "nvarchar")]
-        [MaxLength()]
+        [Column(TypeName = "nvarchar(max)")]
         [DataType(DataType.MultilineText)]
         public string BlogText { get; set; }
 

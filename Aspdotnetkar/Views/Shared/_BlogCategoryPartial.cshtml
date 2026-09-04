@@ -1,0 +1,48 @@
+﻿
+
+@model Aspdotnetkar.ViewModels.BlogViewModel
+
+
+<div class="container mt-0 pt-0" id="blog" style="padding-top: 35px;box-shadow: 5px 5px 10px 0px var(--bs-primary);">
+    <div class="row row-cols-sm-1 row-cols-lg-2">
+        <div class="col-sm-12 col-lg-8 mb-3">
+
+            <div class="swiper" id="swiper-1" data-bss-swiper="{&quot;direction&quot;:&quot;horizontal&quot;,&quot;effect&quot;:&quot;slide&quot;,&quot;pagination&quot;:{&quot;el&quot;:&quot;.swiper-pagination&quot;,&quot;type&quot;:&quot;bullets&quot;},&quot;navigation&quot;:{&quot;nextEl&quot;:&quot;.swiper-button-next&quot;,&quot;prevEl&quot;:&quot;.swiper-button-prev&quot;}}">
+                <div class="swiper-wrapper">
+
+                    @foreach (var item in Model.blogvm)
+                    {
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 text-end">
+                                    <p class="display-6"><a class="fs-4 text-decoration-none" href="#" style="color: var(--bs-black);">@item.BlogTitle</a></p>
+                                    <p class="text-end">&nbsp;@item.BlogShortdescription&nbsp;</p>
+                                </div>
+                                <div class="col text-end"><img class="img-fluid aspect-ratio-1x1 w-100 h-100" width="293" height="238" src="assets/img/thumb.png" style="border-radius: 10px;"></div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+                <div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="col col-lg-4 text-end">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info text-center" style="background: var(--bs-primary);"><span style="color: rgb(255,255,255);">بلاگ ها</span></li>
+
+                @foreach (var item in Model.BlogCategoryvm)
+                {
+
+                    <li class="list-group-item text-end"><span class="badge bg-primary rounded-pill me-4">33</span><a href="#" style="color: rgb(0,0,0);text-decoration: none;">@item.BlogCategoryTitle</a></li>
+                }
+
+            </ul>
+        </div>
+    </div>
+</div>
+
