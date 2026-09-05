@@ -14,15 +14,26 @@ namespace Aspdotnetkar.Components
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var Mostvisite = _context.blogs.OrderByDescending(b => b.BlogVisitCount).Take(10).ToList();
-            var LastBlog = _context.blogs.OrderByDescending(o => o.BlogCreateDate).Take(10).ToList();
+            var Mostvisit = _context.blogs
+                .OrderByDescending(b => b.BlogVisitCount)
+                .Take(10)
+                .ToList();
+
+            var LastBlog = _context.blogs
+                .OrderByDescending(b => b.BlogCreateDate)
+                .Take(10)
+                .ToList();
 
             var vm = new BlogViewModel()
             {
-                blogvm = LastBlog
+                Blog = Mostvisit,
+                LastBlog = LastBlog
             };
 
-            return View("/Views/ComponentViews/LastandMostvisitBlog.cshtml", vm);
+            return View(
+                "/Views/ComponentViews/LastandMostvisitBlog.cshtml",
+                vm
+            );
         }
     }
 }

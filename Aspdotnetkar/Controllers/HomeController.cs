@@ -10,21 +10,13 @@ namespace Aspdotnetkar.Controllers
 {
     public class HomeController : Controller
     {
-        private SiteContext _context;
-        public HomeController(SiteContext context)
-        {
-            _context = context;
-        }
-
+       
         public IActionResult Index()
         {
             ViewBag.dt = ShamsiDatetime.toshamsi(DateTime.Now);
 
             return View();
         }
-
-
-
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

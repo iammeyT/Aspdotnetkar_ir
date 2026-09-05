@@ -8,7 +8,7 @@
             <div class="swiper" id="swiper-1" data-bss-swiper="{&quot;direction&quot;:&quot;horizontal&quot;,&quot;effect&quot;:&quot;slide&quot;,&quot;pagination&quot;:{&quot;el&quot;:&quot;.swiper-pagination&quot;,&quot;type&quot;:&quot;bullets&quot;},&quot;navigation&quot;:{&quot;nextEl&quot;:&quot;.swiper-button-next&quot;,&quot;prevEl&quot;:&quot;.swiper-button-prev&quot;}}">
                 <div class="swiper-wrapper">
 
-                    @foreach (var item in Model.blogvm)
+                    @foreach (var item in Model.LastBlog)
                     {
                         <div class="swiper-slide">
                             <div class="row">
@@ -33,10 +33,9 @@
             <ul class="list-group">
                 <li class="list-group-item list-group-item-info text-center" style="background: var(--bs-primary);"><span style="color: rgb(255,255,255);">بلاگ ها</span></li>
 
-                @foreach (var item in Model.BlogCategoryvm)
+                @foreach (var item in Model.BlogCategory)
                 {
-
-                    <li class="list-group-item text-end"><span class="badge bg-primary rounded-pill me-4">10000</span><a href="#" style="color: rgb(0,0,0);text-decoration: none;">@item.BlogCategoryTitle</a></li>
+                    <li class="list-group-item text-end"><span class="badge bg-primary rounded-pill me-4">@item.blogs.Count</span><a href="#" style="color: rgb(0,0,0);text-decoration: none;">@item.BlogCategoryTitle</a></li>
                 }
 
             </ul>

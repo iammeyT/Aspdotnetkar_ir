@@ -1,13 +1,13 @@
 ﻿@model Aspdotnetkar.ViewModels.BlogViewModel
 
-
 <div class="container mt-5 mb-8 pb-0" id="lastnews" style="padding-top: 35px;box-shadow: 5px 5px 10px var(--bs-warning);">
     <div class="row row-cols-sm-1 row-cols-lg-2">
         <div class="col-sm-12 col-lg-8 text-end">
             <ul class="list-group">
                 <li class="list-group-item list-group-item-info text-center" style="background: var(--bs-warning);"><span style="color: rgb(0,0,0);">اخرین خبر ها</span></li>
 
-                @foreach (var item in Model.blogvm)
+
+                @foreach (var item in Model.LastBlog)
                 {
                     <li class="list-group-item text-end text-sm-end">
                         <a class="fs-5 d-block" href="#" style="color: rgb(0,0,0);text-decoration: none;">@item.BlogTitle</a><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="270" height="212" style="border-radius: 10px;">
@@ -24,10 +24,10 @@
                 <li class="list-group-item list-group-item-info text-center" style="background: var(--bs-warning);"><span style="color: rgb(0,0,0);">پربازید ترینها</span></li>
 
 
-                @foreach (var item in Model.blogvm)
+                @foreach (var item in Model.Blog)
                 {
                     <li class="list-group-item text-end text-sm-end">
-                        <span class="badge bg-primary rounded-pill me-4">42</span><a href="#" style="color: rgb(0,0,0);text-decoration: none;">@item.BlogTitle</a>
+                        <span class="badge bg-primary rounded-pill me-4">@item.BlogVisitCount</span><a href="#" style="color: rgb(0,0,0);text-decoration: none;">@item.BlogTitle</a>
                         <p>تاریخ انتشار : @item.BlogCreateDate</p><img class="aspect-ratio-4x3 object-fit-contain" src="assets/img/thumb.png" width="126" height="100" style="border-radius: 10px;">
                     </li>
                 }

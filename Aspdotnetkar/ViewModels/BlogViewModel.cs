@@ -7,9 +7,11 @@ namespace Aspdotnetkar.ViewModels
 {
     public class BlogViewModel
     {
-        public List<Blog> blogvm { get; set; }
+        public List<Blog> Blog { get; set; }
 
-        public List<BlogCategory> BlogCategoryvm { get; set; }
+        public List<BlogCategory> BlogCategory { get; set; }
+
+        public List<Blog> LastBlog { get; set; }
 
     }
 }

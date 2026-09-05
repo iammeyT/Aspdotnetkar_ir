@@ -1,6 +1,7 @@
 ﻿using Aspdotnetkar.Context;
 using Aspdotnetkar.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Aspdotnetkar.Components
 {
@@ -12,23 +13,24 @@ namespace Aspdotnetkar.Components
             _context = context;
         }
 
-
-        public async Task<IViewComponentResult> InvokeAsync()
+            public async Task<IViewComponentResult> InvokeAsync()
         {
+            var last5Blog = await _context.blogs
+                .OrderByDescending(o => o.BlogCreateDate)
+                .Take(5)
+                .ToListAsync();
 
-            var blogcategory = _context.blogCategories.ToList();
+            var showBlogcategory = await _context.blogCategories
+                .Include(c => c.blogs)
+                .ToListAsync();
 
-            var blog = _context.blogs.OrderByDescending(o => o.BlogTitle).Take(3).ToList();
-
-
-            var vm = new BlogViewModel()
+            var category = new BlogViewModel
             {
-                blogvm = blog,
-                BlogCategoryvm = blogcategory,
-
+                LastBlog = last5Blog,
+                BlogCategory = showBlogcategory
             };
 
-            return View("/Views/ComponentViews/blogandcategory.cshtml", vm);
+            return View("/Views/ComponentViews/blogandcategory.cshtml", category);
         }
     }
 }
