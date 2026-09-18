@@ -13,5 +13,11 @@ namespace Aspdotnetkar.ViewModels
 
         public List<Blog> LastBlog { get; set; }
 
+        public List<Blog> AllBlog { get; set; }
+
+        public List<Blog> TopBlogVisit { get; set; }
+
+        public List<BlogCategory> Getcat { get; set; }
+
     }
 }

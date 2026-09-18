@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="fa" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Aspdotnetkar | طراحی سایت حرفه‌ای با ASP.NET Core و #C</title>
+    <link rel="canonical" href="https://www.aspdotnetkar.ir/">
+    <meta property="og:url" content="https://www.aspdotnetkar.ir/">
+    <meta name="description" content="Aspdotnetkar تیم طراحی و توسعه‌ی سایت با زبان #C و فریم‌ورک ASP.NET Core است؛ سایت شرکتی، فروشگاهی و اختصاصی شما را سریع، امن و ریسپانسیو می‌سازیم.">
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Aspdotnetkar",
+            "url": "https://www.aspdotnetkar.ir"
+        }
+    </script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Vazirmatn.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="adk-navbar">
+        <nav class="navbar navbar-expand-lg container-adk">
+            <a class="adk-brand" href="index.html"><span> Aspdotnetkar <small>.Build. Code. Scale</small></span></a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#adkNav" type="button"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse justify-content-between" id="adkNav">
+                <ul class="nav gap-lg-2 mt-3 mt-lg-0 mx-lg-auto adk-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">خانه</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#tech">تکنولوژی‌ها</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#plans">پلن‌ها</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">وبلاگ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">تماس با ما</a></li>
+                </ul>
+                <div class="d-flex gap-2 mt-3 mt-lg-0"><a class="btn btn-adk-outline btn-sm-adk" role="button" href="login.html">ورود</a><a class="btn btn-adk-amber btn-sm-adk" role="button" href="register.html">ثبت‌نام</a></div>
+            </div>
+        </nav>
+    </header>
+    <section class="adk-hero">
+        <div class="container-adk">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <span class="eyebrow-badge"><span class="dot"></span> متخصص طراحی سایت با ASP.NET Core</span>
+                    <h1>طراحی سایت حرفه‌ای با پایه‌ای قوی از #C و ASP.NET Core</h1>
+                    <p class="lead">کسب‌وکار شما به یک قالب آماده محدود نمی‌شود. <strong>Aspdotnetkar</strong> با استفاده از فریم ورک&nbsp;<strong>ASP.NET Core و زبان برنامه نویسی سی شارپ #C</strong>، وب‌سایتی متناسب با نیاز، فرآیندها و مسیر رشد کسب‌وکار شما طراحی و توسعه می‌دهد.</p>
+                    <div class="cta-row"><a class="btn btn-adk-amber" role="button" href="index.html#plans">شروع پروژه</a><a class="btn btn-adk-outline" role="button" href="index.html#plans">مشاهده پلن‌های قیمتی</a></div>
+                    <div class="adk-stats">
+                        <div class="stat"><b>10+</b><span>پروژه تحویل‌شده</span></div>
+                        <div class="stat"><b>2 سال</b><span>تجربه در ASP.NET Core</span></div>
+                        <div class="stat"><b>98٪</b><span>رضایت مشتریان</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 code-col">
+                    <div class="code-window">
+                        <div class="code-window__bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="file-name">Program.cs</span></div><pre><code><span class="ln">1</span><span class="tok-kw">var</span> builder = <span class="tok-type">WebApplication</span>.<span class="tok-fn">CreateBuilder</span>(args);
+<span class="ln">2</span>builder.<span class="tok-prop">Services</span>.<span class="tok-fn">AddControllers</span>();
+<span class="ln">3</span>builder.<span class="tok-prop">Services</span>.<span class="tok-fn">AddDbContext</span>&lt;<span class="tok-type">AppDbContext</span>&gt;();
+<span class="ln">4</span>
+<span class="ln">5</span><span class="tok-kw">var</span> app = builder.<span class="tok-fn">Build</span>();
+<span class="ln">6</span>
+<span class="ln">7</span><span class="tok-com">// نمایش صفحه‌ی اصلی سایت</span>
+<span class="ln">8</span>app.<span class="tok-fn">MapGet</span>(<span class="tok-str">"/"</span>, () =&gt;
+<span class="ln">9</span>    <span class="tok-str">"Aspdotnetkar | ساخته‌شده با کد تمیز"</span>);
+<span class="ln">10</span>
+<span class="ln">11</span>app.<span class="tok-fn">MapControllers</span>();
+<span class="ln">12</span>app.<span class="tok-fn">Run</span>();</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="tech" class="section bg-surface">
+        <div class="container-adk">
+            <div class="section-head">
+                <h2>با چه تکنولوژی‌هایی سایت شما را می‌سازیم؟</h2>
+                <p>هر پروژه با ابزارهای استاندارد و به‌روز اکوسیستم دات‌نت پیاده‌سازی می‌شود؛ همین انتخاب باعث می‌شود سایت شما سریع، امن و در بلندمدت قابل نگهداری بماند.</p>
+            </div>
+            <div class="row g-3 g-lg-4">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="tech-card">
+                        <div class="tech-icon"><img class="img-fluid" width="64" height="64" src="assets/img/Logo/icons8-c-sharp-logo-64.png"></div>
+                        <h3>#C</h3>
+                        <p>زبان اصلی برنامه‌نویسی بک‌اند؛ پایدار، تایپ‌دار و مناسب پروژه‌های بزرگ و طولانی‌مدت.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="tech-card">
+                        <div class="tech-icon"><img class="img-fluid" width="48" height="48" src="assets/img/Logo/icons8-.net-framework-48.svg"></div>
+                        <h3>ASP.NET Core</h3>
+                        <p>فریم‌ورک وب مایکروسافت برای ساخت سایت و API‌های مقیاس‌پذیر و سریع.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="tech-card">
+                        <div class="tech-icon"><img class="img-fluid" width="591" height="591" src="assets/img/Logo/Bitmap-MEDIUM_Entity-Framework-Core-Logo_2colors_Square_Boxed_RGB.png"></div>
+                        <h3>Entity Framework Core</h3>
+                        <p>ارتباط ایمن با پایگاه‌داده، بدون نیاز به نوشتن کوئری‌های پیچیده‌ی SQL.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="tech-card">
+                        <div class="tech-icon"><img class="img-fluid" width="48" height="48" src="assets/img/Logo/icons8-sql-48.png"></div>
+                        <h3>SQL Server</h3>
+                        <p>پایگاه‌داده‌ی اصلی برای ذخیره‌سازی امن و منظم اطلاعات سایت شما.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="tech-card">
+                        <div class="tech-icon"><img class="img-fluid" width="750" height="422" src="assets/img/Logo/blazor.jpg"></div>
+                        <h3>Blazor</h3>
+                        <p>ساخت رابط کاربری تعاملی با #C، برای پنل‌های مدیریتی سریع‌تر.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="tech-card">
+                        <div class="tech-icon"><img class="img-fluid" width="48" height="48" src="assets/img/Logo/icons8-bootstrap-48.svg"></div>
+                        <h3>Bootstrap 5</h3>
+                        <p>طراحی ریسپانسیو و هماهنگ با موبایل، تبلت و دسکتاپ در تمام صفحات.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="tech-card">
+                        <div class="tech-icon"><img class="img-fluid" width="48" height="48" src="assets/img/Logo/icons8-html-5-48.svg"></div>
+                        <h3>Html</h3>
+                        <p>اتصال سایت به اپلیکیشن موبایل یا سرویس‌ها و سامانه‌های دیگر شما.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="tech-card">
+                        <div class="tech-icon"><img class="img-fluid" width="48" height="48" src="assets/img/Logo/icons8-css3-48.svg"></div>
+                        <h3>Css</h3>
+                        <p>استقرار و میزبانی پایدار روی زیرساخت مایکروسافت با آماده‌ی رشد ترافیک.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="blog" class="section bg-surface">
+        <div class="container-adk">
+            <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4">
+                <div class="mb-0 section-head">
+                    <h2>چرا Asp.Net Core ؟</h2>
+                    <p>فناوری قدرتمند، امن و قابل توسعه برای ساخت وب‌سایت‌های حرفه‌ای.</p>
+                </div>
+            </div>
+            <div class="row g-4" data-blog-panel="latest">
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v1"><img class="img-fluid" width="293" height="238" src="assets/img/other/thumb.png"></a>
+                        <div class="blog-card__body">
+                            <h3>سرعت بالا</h3>
+                            <p class="text-center">ASP.NET Core با بهره‌گیری از معماری بهینه و قابلیت‌های #<strong>C و NET.</strong>&nbsp;امکان ساخت وب‌سایت‌هایی سریع و پاسخ‌گو را فراهم می‌کند.<br><br></p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><img class="img-fluid" width="828" height="552" src="assets/img/other/iphone-17-.jpg"></a>
+                        <div class="blog-card__body">
+                            <h3>امنیت</h3>
+                            <p class="text-center">با استفاده از <strong>ASP.NET Core Identity، Authentication و Authorization</strong> می‌توان سیستم‌های احراز هویت، مدیریت کاربران، نقش‌ها و سطوح دسترسی را به‌صورت ساختاریافته در پروژه پیاده‌سازی کرد.<br><br></p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><img class="img-fluid" width="828" height="552" src="assets/img/other/iphone-17-.jpg"></a>
+                        <div class="blog-card__body">
+                            <h3>قابلیت توسعه</h3>
+                            <p class="text-center">ساختار ماژولار ASP.NET Core باعث می‌شود پروژه بتواند هم‌زمان با رشد کسب‌وکار توسعه پیدا کند و قابلیت‌های جدید به آن اضافه شود.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><img class="img-fluid" width="6000" height="4000" src="assets/img/other/pexels-codioful-7135037.jpg"></a>
+                        <div class="blog-card__body">
+                            <h3>تکنولوژی مدرن</h3>
+                            <p class="text-center">قرارگیری ASP.NET Core در اکوسیستم <strong>Microsoft .NET</strong> امکان استفاده از ابزارها و فناوری‌های متنوع برای توسعه و نگهداری پروژه را فراهم می‌کند.<br><br></p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="row d-none g-4" data-blog-panel="popular">
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v1"><span>EF CORE</span></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش ASP.NET Core</span>
+                            <h3><a href="blog-single.html">راهنمای کامل Entity Framework Core برای مبتدیان</a></h3>
+                            <p>از نصب پکیج تا نوشتن اولین Migration، به‌همراه مثال‌های واقعی.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۲ اردیبهشت ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۴٬۲۱۰ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v3"><span>AUTH</span></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">امنیت وب</span>
+                            <h3><a href="blog-single.html">آموزش پیاده‌سازی JWT Authentication در ASP.NET Core</a></h3>
+                            <p>ساخت سیستم ورود امن برای API با توکن‌های JWT، گام‌به‌گام.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۳ اسفند ۱۴۰۴
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۳٬۷۵۰ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><span>C# VS JS</span></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش C#</span>
+                            <h3><a href="blog-single.html">مقایسه‌ی ASP.NET Core و Node.js برای پروژه‌های بزرگ</a></h3>
+                            <p>کدام فریم‌ورک برای سامانه‌های پرترافیک و سازمانی مناسب‌تر است؟</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۲۰ بهمن ۱۴۰۴
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۳٬۱۹۰ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v4"><span>PERF</span></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">طراحی UI/UX</span>
+                            <h3><a href="blog-single.html">چگونه سرعت سایت ASP.NET Core را افزایش دهیم؟</a></h3>
+                            <p>تکنیک‌های کش، فشرده‌سازی و بهینه‌سازی کوئری برای بارگذاری سریع‌تر.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۷ دی ۱۴۰۴
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۲٬۸۴۰ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="text-center mt-5"></div>
+        </div>
+    </section>
+    <section id="plans" class="section bg-paper">
+        <div class="container-adk">
+            <div class="section-head">
+                <h2>پلن‌های طراحی سایت</h2>
+                <p>متناسب با اندازه و نیاز کسب‌وکار خود یکی از پلن‌ها را انتخاب کنید، یا برای پروژه‌ی اختصاصی مستقیم با تیم فنی ما صحبت کنید.</p>
+            </div>
+            <div class="row align-items-stretch g-4">
+                <div class="col-lg-4">
+                    <div class="plan-card">
+                        <h3>پایه</h3>
+                        <p class="plan-audience">مناسب کسب‌وکارهای کوچک و سایت‌های معرفی شرکت</p>
+                        <div class="plan-price"><span>60,000,000 تومان </span></div>
+                        <p class="plan-note">زمان تحویل: ۱۰ تا ۱۵ روز کاری</p>
+                        <ul>
+                            <li>
+                                <svg class="bi bi-check-circle-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                </svg> طراحی تا ۶ صفحه‌ی اختصاصی
+                            </li>
+                            <li>
+                                <svg class="bi bi-check-circle-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                </svg> پیاده‌سازی با ASP.NET Core MVC
+                            </li>
+                            <li>
+                                <svg class="bi bi-check-circle-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                </svg> فرم تماس و نقشه‌ی گوگل
+                            </li>
+                            <li>
+                                <svg class="bi bi-check-circle-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                </svg> طراحی کاملاً ریسپانسیو با Bootstrap
+                            </li>
+                            <li>
+                                <svg class="bi bi-check-circle-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                </svg> یک ماه پشتیبانی رایگان
+                            </li>
+                        </ul><a class="btn btn-adk-ghost" role="button" href="register.html">انتخاب پلن پایه</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="plan-card plan-card--featured">
+                        <span class="plan-tag">پرتقاضاترین پلن</span>
+                        <h3>حرفه‌ای</h3>
+                        <p class="plan-audience">مناسب شرکت‌ها و فروشگاه‌های اینترنتی در حال رشد</p>
+                        <div class="plan-price"><span>110,000,000 تومان </span><sup>از</sup></div>
+                        <p class="plan-note">زمان تحویل: ۲۰ تا ۳۰ روز کاری</p>
+                        <ul>
+                            <li>
+                                <svg class="bi bi-check-circle-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                </svg> تمام امکانات پلن پایه
+                            </li>
+                            <li>
+                                <svg class="bi bi-check-circle-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                </svg> پنل مدیریت اختصاصی (Admin Panel)
+                            </li>
+                            <li>
+                                <svg class="bi bi-check-circle-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                </svg> پایگاه‌داده SQL Server با Entity Framework Core
+                            </li>
+                            <li>
+                                <svg class="bi bi-check-circle-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                </svg> سیستم وبلاگ و دسته‌بندی محتوا
+                            </li>
+                            <li>
+                                <svg class="bi bi-check-circle-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                </svg> بهینه‌سازی اولیه‌ی سئو
+                            </li>
+                            <li>
+                                <svg class="bi bi-check-circle-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                </svg> سه ماه پشتیبانی و به‌روزرسانی رایگان
+                            </li>
+                        </ul><a class="btn btn-adk-primary" role="button" href="register.html">انتخاب پلن حرفه‌ای</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="plan-card">
+                        <h3>سازمانی</h3>
+                        <p class="plan-audience">مناسب سامانه‌ها، پرتال‌ها و پروژه‌های کاملاً اختصاصی</p>
+                        <div class="plan-price"><span>قیمت‌گذاری اختصاصی</span></div>
+                        <p class="plan-note">زمان تحویل بر اساس دامنه‌ی پروژه تعیین می‌شود</p>
+                        <ul>
+                            <li>
+                                <svg class="bi bi-check-circle-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                </svg> طراحی API اختصاصی برای اتصال به اپلیکیشن موبایل
+                            </li>
+                            <li>
+                                <svg class="bi bi-check-circle-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                </svg> سیستم چندنقشی کاربران و سطوح دسترسی
+                            </li>
+                            <li>
+                                <svg class="bi bi-check-circle-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                </svg> اتصال به درگاه پرداخت و سامانه‌های بیرونی
+                            </li>
+                            <li>
+                                <svg class="bi bi-check-circle-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                </svg> معماری مقیاس‌پذیر، در صورت نیاز میکروسرویس
+                            </li>
+                            <li>
+                                <svg class="bi bi-check-circle-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                </svg> پشتیبانی و مانیتورینگ اختصاصی
+                            </li>
+                        </ul><a class="btn btn-adk-ghost" role="button" href="index.html#contact">مشاوره پروژه سازمانی</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" class="section bg-surface">
+        <div class="container-adk">
+            <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4">
+                <div class="mb-0 section-head">
+                    <h2>نمونه کار ها (به زودی)</h2>
+                </div>
+                <div class="blog-toggle" role="tablist"></div>
+            </div>
+            <div class="row g-4" data-blog-panel="latest">
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="/" class="blog-cover cover-v1"><img class="img-fluid w-100 h-100" width="5141" height="3055" src="assets/img/portfolio/pexels-tranmautritam-251225.jpg"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">شرکتی</span>
+                            <h3>نمونه کار 1</h3>
+                            <p>متن</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۸ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۸۴۰ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="/" class="blog-cover cover-v2"><img class="img-fluid w-100 h-100" width="4288" height="2848" src="assets/img/portfolio/pexels-pixabay-39284.jpg"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">شخصی</span>
+                            <h3>نمونه کار 2</h3>
+                            <p>متن</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۴ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۶۱۲ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="/" class="blog-cover cover-v2"><img class="img-fluid w-100 h-100" width="3024" height="4032" src="assets/img/portfolio/jdy22-I9waNpsafmM-unsplash.jpg"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">فروشگاهی</span>
+                            <h3>نمونه کار 3</h3>
+                            <p>متن</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۴ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۶۱۲ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="/" class="blog-cover cover-v2"><img class="img-fluid w-100 h-100" width="12000" height="6736" src="assets/img/portfolio/dharmik-moradiya-I_8_KJBWAV4-unsplash.jpg"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">اموزشی</span>
+                            <h3>نمونه کار 3</h3>
+                            <p>متن</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۴ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۶۱۲ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="row d-none g-4" data-blog-panel="popular">
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v1"><span>EF CORE</span></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش ASP.NET Core</span>
+                            <h3><a href="blog-single.html">راهنمای کامل Entity Framework Core برای مبتدیان</a></h3>
+                            <p>از نصب پکیج تا نوشتن اولین Migration، به‌همراه مثال‌های واقعی.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۲ اردیبهشت ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۴٬۲۱۰ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v3"><span>AUTH</span></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">امنیت وب</span>
+                            <h3><a href="blog-single.html">آموزش پیاده‌سازی JWT Authentication در ASP.NET Core</a></h3>
+                            <p>ساخت سیستم ورود امن برای API با توکن‌های JWT، گام‌به‌گام.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۳ اسفند ۱۴۰۴
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۳٬۷۵۰ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><span>C# VS JS</span></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش C#</span>
+                            <h3><a href="blog-single.html">مقایسه‌ی ASP.NET Core و Node.js برای پروژه‌های بزرگ</a></h3>
+                            <p>کدام فریم‌ورک برای سامانه‌های پرترافیک و سازمانی مناسب‌تر است؟</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۲۰ بهمن ۱۴۰۴
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۳٬۱۹۰ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v4"><span>PERF</span></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">طراحی UI/UX</span>
+                            <h3><a href="blog-single.html">چگونه سرعت سایت ASP.NET Core را افزایش دهیم؟</a></h3>
+                            <p>تکنیک‌های کش، فشرده‌سازی و بهینه‌سازی کوئری برای بارگذاری سریع‌تر.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۷ دی ۱۴۰۴
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۲٬۸۴۰ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="text-center mt-5"><a class="btn disabled btn-adk-ghost" role="button" href="Portfolio.html">مشاهده‌ی همه‌ی نمونه کارها</a></div>
+        </div>
+    </section>
+    <section id="blog-1" class="section bg-surface">
+        <div class="container-adk">
+            <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4">
+                <div class="mb-0 section-head">
+                    <h2>وبلاگ Aspdotnetkar</h2>
+                    <p>آموزش‌های عملی درباره‌ی #C، ASP.NET Core و ساخت سایت‌های مدرن.</p>
+                </div>
+                <div class="blog-toggle" role="tablist"><button class="active" type="button" data-blog-tab="latest">آخرین مطالب</button></div>
+            </div>
+            <div class="row g-4" data-blog-panel="latest">
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v1"><img class="img-fluid" width="293" height="238" src="assets/img/other/thumb.png"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش ASP.NET Core</span>
+                            <h3><a href="blog-single.html">چرا باید سایت خود را با ASP.NET Core بسازید؟</a></h3>
+                            <p>مقایسه‌ی سرعت، امنیت و هزینه‌ی نگهداری ASP.NET Core با چند فریم‌ورک محبوب دیگر.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۸ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۸۴۰ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><img class="img-fluid" width="3117" height="4675" src="assets/img/other/a-c-NqXqLPhdbvU-unsplash.jpg"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش C#</span>
+                            <h3><a href="blog-single.html">آشنایی با Nullable Reference Types در #C</a></h3>
+                            <p>چطور با این ویژگی از خطاهای رایج Null در پروژه‌های بزرگ جلوگیری کنیم.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۴ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۶۱۲ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><img class="img-fluid" width="6000" height="4000" src="assets/img/other/pexels-codioful-7135037.jpg"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش C#</span>
+                            <h3><a href="blog-single.html">آشنایی با Nullable Reference Types در #C</a></h3>
+                            <p>چطور با این ویژگی از خطاهای رایج Null در پروژه‌های بزرگ جلوگیری کنیم.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۴ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۶۱۲ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><img class="img-fluid" width="800" height="533" src="assets/img/other/premium_vector-1682309270309-bc01eee5d33a.png"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش C#</span>
+                            <h3><a href="blog-single.html">آشنایی با Nullable Reference Types در #C</a></h3>
+                            <p>چطور با این ویژگی از خطاهای رایج Null در پروژه‌های بزرگ جلوگیری کنیم.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۴ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۶۱۲ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><img class="img-fluid" width="591" height="591" src="assets/img/Logo/Bitmap-MEDIUM_Entity-Framework-Core-Logo_2colors_Square_Boxed_RGB.png"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش C#</span>
+                            <h3><a href="blog-single.html">آشنایی با Nullable Reference Types در #C</a></h3>
+                            <p>چطور با این ویژگی از خطاهای رایج Null در پروژه‌های بزرگ جلوگیری کنیم.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۴ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۶۱۲ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><img class="img-fluid" width="3117" height="4675" src="assets/img/other/a-c-NqXqLPhdbvU-unsplash.jpg"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش C#</span>
+                            <h3><a href="blog-single.html">آشنایی با Nullable Reference Types در #C</a></h3>
+                            <p>چطور با این ویژگی از خطاهای رایج Null در پروژه‌های بزرگ جلوگیری کنیم.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۴ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۶۱۲ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><img class="img-fluid" width="828" height="552" src="assets/img/other/iphone-17-.jpg"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش C#</span>
+                            <h3><a href="blog-single.html">آشنایی با Nullable Reference Types در #C</a></h3>
+                            <p>چطور با این ویژگی از خطاهای رایج Null در پروژه‌های بزرگ جلوگیری کنیم.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۴ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۶۱۲ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><img class="img-fluid" width="12000" height="6736" src="assets/img/portfolio/dharmik-moradiya-I_8_KJBWAV4-unsplash.jpg"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش C#</span>
+                            <h3><a href="blog-single.html">آشنایی با Nullable Reference Types در #C</a></h3>
+                            <p>چطور با این ویژگی از خطاهای رایج Null در پروژه‌های بزرگ جلوگیری کنیم.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۴ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۶۱۲ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="row d-none g-4" data-blog-panel="popular">
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v1"><span>EF CORE</span></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش ASP.NET Core</span>
+                            <h3><a href="blog-single.html">راهنمای کامل Entity Framework Core برای مبتدیان</a></h3>
+                            <p>از نصب پکیج تا نوشتن اولین Migration، به‌همراه مثال‌های واقعی.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۲ اردیبهشت ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۴٬۲۱۰ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v3"><span>AUTH</span></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">امنیت وب</span>
+                            <h3><a href="blog-single.html">آموزش پیاده‌سازی JWT Authentication در ASP.NET Core</a></h3>
+                            <p>ساخت سیستم ورود امن برای API با توکن‌های JWT، گام‌به‌گام.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۳ اسفند ۱۴۰۴
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۳٬۷۵۰ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><span>C# VS JS</span></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش C#</span>
+                            <h3><a href="blog-single.html">مقایسه‌ی ASP.NET Core و Node.js برای پروژه‌های بزرگ</a></h3>
+                            <p>کدام فریم‌ورک برای سامانه‌های پرترافیک و سازمانی مناسب‌تر است؟</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۲۰ بهمن ۱۴۰۴
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۳٬۱۹۰ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v4"><span>PERF</span></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">طراحی UI/UX</span>
+                            <h3><a href="blog-single.html">چگونه سرعت سایت ASP.NET Core را افزایش دهیم؟</a></h3>
+                            <p>تکنیک‌های کش، فشرده‌سازی و بهینه‌سازی کوئری برای بارگذاری سریع‌تر.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۷ دی ۱۴۰۴
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۲٬۸۴۰ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="text-center mt-5"><a class="btn btn-adk-ghost" role="button" href="blog.html">مشاهده‌ی همه‌ی مطالب وبلاگ</a></div>
+        </div>
+    </section>
+    <section id="blog-2" class="section bg-surface">
+        <div class="container-adk">
+            <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4">
+                <div class="mb-0 section-head">
+                    <h2>پربازدید ترین ها</h2>
+                    <p>پربازدیدترین های مطالب چه بوده اند.</p>
+                </div>
+                <div class="blog-toggle" role="tablist"></div>
+            </div>
+            <div class="row g-4" data-blog-panel="latest">
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v1"><img class="img-fluid" width="293" height="238" src="assets/img/other/thumb.png"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش ASP.NET Core</span>
+                            <h3><a href="blog-single.html">چرا باید سایت خود را با ASP.NET Core بسازید؟</a></h3>
+                            <p>مقایسه‌ی سرعت، امنیت و هزینه‌ی نگهداری ASP.NET Core با چند فریم‌ورک محبوب دیگر.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۸ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۸۴۰ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><img class="img-fluid" width="3117" height="4675" src="assets/img/other/a-c-NqXqLPhdbvU-unsplash.jpg"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش C#</span>
+                            <h3><a href="blog-single.html">آشنایی با Nullable Reference Types در #C</a></h3>
+                            <p>چطور با این ویژگی از خطاهای رایج Null در پروژه‌های بزرگ جلوگیری کنیم.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۴ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۶۱۲ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><img class="img-fluid" width="6000" height="4000" src="assets/img/other/pexels-codioful-7135037.jpg"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش C#</span>
+                            <h3><a href="blog-single.html">آشنایی با Nullable Reference Types در #C</a></h3>
+                            <p>چطور با این ویژگی از خطاهای رایج Null در پروژه‌های بزرگ جلوگیری کنیم.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۴ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۶۱۲ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><img class="img-fluid" width="800" height="533" src="assets/img/other/premium_vector-1682309270309-bc01eee5d33a.png"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش C#</span>
+                            <h3><a href="blog-single.html">آشنایی با Nullable Reference Types در #C</a></h3>
+                            <p>چطور با این ویژگی از خطاهای رایج Null در پروژه‌های بزرگ جلوگیری کنیم.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۴ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۶۱۲ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><img class="img-fluid" width="150" height="150" src="assets/img/Logo/entityframeworkcore-original.svg"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش C#</span>
+                            <h3><a href="blog-single.html">آشنایی با Nullable Reference Types در #C</a></h3>
+                            <p>چطور با این ویژگی از خطاهای رایج Null در پروژه‌های بزرگ جلوگیری کنیم.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۴ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۶۱۲ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><img class="img-fluid" width="750" height="422" src="assets/img/Logo/blazor.jpg"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش C#</span>
+                            <h3><a href="blog-single.html">آشنایی با Nullable Reference Types در #C</a></h3>
+                            <p>چطور با این ویژگی از خطاهای رایج Null در پروژه‌های بزرگ جلوگیری کنیم.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۴ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۶۱۲ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><img class="img-fluid" width="6000" height="4000" src="assets/img/other/pexels-codioful-7135037.jpg"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش C#</span>
+                            <h3><a href="blog-single.html">آشنایی با Nullable Reference Types در #C</a></h3>
+                            <p>چطور با این ویژگی از خطاهای رایج Null در پروژه‌های بزرگ جلوگیری کنیم.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۴ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۶۱۲ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><img class="img-fluid" width="800" height="533" src="assets/img/other/premium_vector-1682309270309-bc01eee5d33a.png"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش C#</span>
+                            <h3><a href="blog-single.html">آشنایی با Nullable Reference Types در #C</a></h3>
+                            <p>چطور با این ویژگی از خطاهای رایج Null در پروژه‌های بزرگ جلوگیری کنیم.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۴ شهریور ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۶۱۲ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="row d-none g-4" data-blog-panel="popular">
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v1"><span>EF CORE</span></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش ASP.NET Core</span>
+                            <h3><a href="blog-single.html">راهنمای کامل Entity Framework Core برای مبتدیان</a></h3>
+                            <p>از نصب پکیج تا نوشتن اولین Migration، به‌همراه مثال‌های واقعی.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۱۲ اردیبهشت ۱۴۰۵
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۴٬۲۱۰ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v3"><span>AUTH</span></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">امنیت وب</span>
+                            <h3><a href="blog-single.html">آموزش پیاده‌سازی JWT Authentication در ASP.NET Core</a></h3>
+                            <p>ساخت سیستم ورود امن برای API با توکن‌های JWT، گام‌به‌گام.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۳ اسفند ۱۴۰۴
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۳٬۷۵۰ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v2"><span>C# VS JS</span></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">آموزش C#</span>
+                            <h3><a href="blog-single.html">مقایسه‌ی ASP.NET Core و Node.js برای پروژه‌های بزرگ</a></h3>
+                            <p>کدام فریم‌ورک برای سامانه‌های پرترافیک و سازمانی مناسب‌تر است؟</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۲۰ بهمن ۱۴۰۴
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۳٬۱۹۰ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v4"><span>PERF</span></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">طراحی UI/UX</span>
+                            <h3><a href="blog-single.html">چگونه سرعت سایت ASP.NET Core را افزایش دهیم؟</a></h3>
+                            <p>تکنیک‌های کش، فشرده‌سازی و بهینه‌سازی کوئری برای بارگذاری سریع‌تر.</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> ۷ دی ۱۴۰۴
+                                </span><span class="meta-item">
+                                    <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                    </svg> ۲٬۸۴۰ بازدید
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="text-center mt-5"></div>
+        </div>
+    </section>
+    <section id="contact" class="section-tight bg-surface">
+        <div class="container-adk">
+            <div class="cta-banner">
+                <div>
+                    <h2>پروژه‌ی بعدی خود را با تیم Aspdotnetkar بسازید</h2>
+                    <p>جزئیات پروژه‌تان را برای ما بفرستید؛ ظرف کمتر از ۲۴ ساعت با یک برنامه و برآورد قیمت مشخص، با شما تماس می‌گیریم.</p>
+                </div>
+                <div class="d-flex flex-wrap gap-2"><a class="btn btn-adk-amber" role="button" href="register.html">درخواست مشاوره رایگان</a><a class="btn btn-adk-outline" role="button" href="blog.html">مشاهده‌ی وبلاگ</a></div>
+            </div>
+        </div>
+    </section>
+    <footer class="adk-footer">
+        <div class="container-adk">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="d-inline-flex mb-3 adk-brand" href="index.html"><span>Aspdotnetkar</span></a>
+                    <p class="mt-3" style="max-width:22rem;">تیم طراحی و توسعه‌ی وب، متخصص در ساخت سایت با #C و ASP.NET Core؛ از سایت‌های شرکتی کوچک تا سامانه‌های اختصاصی سازمانی.</p>
+                    <div class="mt-3 social-row">
+                        <a href="#" aria-label="تلگرام">
+                            <svg class="bi bi-telegram" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"></path>
+                            </svg>
+                        </a><a href="#" aria-label="اینستاگرام">
+                            <svg class="bi bi-whatsapp" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"></path>
+                            </svg>
+                        </a><a href="#" aria-label="لینکدین">
+                            <svg class="bi bi-instagram" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>دسترسی سریع</h5>
+                    <ul>
+                        <li><a href="index.html">خانه</a></li>
+                        <li><a href="index.html#tech">تکنولوژی‌ها</a></li>
+                        <li><a href="index.html#plans">پلن‌ها</a></li>
+                        <li><a href="blog.html">وبلاگ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>تماس با ما</h5>
+                    <ul>
+                        <li>
+                            <svg class="bi bi-geo-alt me-1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"></path>
+                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"></path>
+                            </svg>شیراز , سینما سعدی
+                        </li>
+                        <li>
+                            <svg class="bi bi-telephone me-1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"></path>
+                            </svg> 09906713575
+                        </li>
+                        <li>
+                            <svg class="bi bi-envelope me-1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"></path>
+                            </svg>m.abbasi7596@gmail.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="foot-bottom"><span>© ۱۴۰۵ Aspdotnetkar — تمام حقوق محفوظ است.</span><span>طراحی و توسعه با ASP.NET Core</span></div>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

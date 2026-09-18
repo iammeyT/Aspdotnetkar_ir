@@ -1,0 +1,47 @@
+﻿@model Aspdotnetkar.ViewModels.BlogViewModel
+
+
+<section id="blog-1" class="section bg-surface">
+    <div class="container-adk">
+        <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4">
+            <div class="mb-0 section-head">
+                <h2>وبلاگ Aspdotnetkar</h2>
+                <p>آموزش‌های عملی درباره‌ی #C، ASP.NET Core و ساخت سایت‌های مدرن.</p>
+            </div>
+ 
+        </div>
+        <div class="row g-4" data-blog-panel="latest">
+            
+
+        @foreach (var item in Model.LastBlog)
+        {
+                <div class="col-sm-6 col-lg-3">
+                    <article class="blog-card">
+                        <a href="blog-single.html" class="blog-cover cover-v1"><img class="img-fluid" width="293" height="238" src="assets/img/other/thumb.png"></a>
+                        <div class="blog-card__body">
+                            <span class="cat-pill">@item.BlogCategory.BlogCategoryTitle</span>
+                            <h3><a href="blog-single.html">@item.BlogTitle</a></h3>
+                            <p>@item.BlogShortdescription</p>
+                            <div class="meta-row">
+                                <span class="meta-item">
+                                    <svg class="bi bi-calendar3" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                                    </svg> @item.BlogCreateDate
+                                </span><span class="meta-item">
+                                <svg class="bi bi-eye" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"></path>
+                                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"></path>
+                                </svg>@item.BlogVisitCount
+                            </span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        }
+
+
+        <div class="text-center mt-5"><a class="btn btn-adk-ghost" role="button" asp-action="showblog" asp-controller="AllBlogs"
+        >مشاهده‌ی همه‌ی مطالب وبلاگ</a></div>
+    </div>
+</section>
