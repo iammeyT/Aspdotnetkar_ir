@@ -10,7 +10,7 @@ namespace Aspdotnetkar.Controllers
 {
     public class HomeController : Controller
     {
-       
+        
         public IActionResult Index()
         {
             ViewBag.dt = ShamsiDatetime.toshamsi(DateTime.Now);
